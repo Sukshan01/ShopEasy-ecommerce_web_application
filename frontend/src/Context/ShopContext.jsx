@@ -23,12 +23,12 @@ const ShopContextProvider = (props) => {
     const [cartItems, setCartItems] = useState(getDefaultCart());
 
      useEffect(() => {
-        fetch('http://localhost:4000/allproducts')
+        fetch('https://shopeasy-ecommerce-web-application.onrender.com/allproducts')
         .then((response) => response.json())
         .then((data) => setAll_Product(data))
 
         if(localStorage.getItem('auth-token')){
-            fetch('http://localhost:4000/getcartdata', {
+            fetch('https://shopeasy-ecommerce-web-application.onrender.com/getcartdata', {
 
                 method: 'POST',
                 headers: {
@@ -48,7 +48,7 @@ const ShopContextProvider = (props) => {
     setCartItems((prev) => ({...prev, [itemId] : prev[itemId] + 1}) );
 
     if(localStorage.getItem('auth-token')){
-        fetch('http://localhost:4000/addtocart', {
+        fetch('https://shopeasy-ecommerce-web-application.onrender.com/addtocart', {
 
             method: 'POST',
             headers: {
@@ -70,7 +70,7 @@ const ShopContextProvider = (props) => {
 
     if(localStorage.getItem('auth-token')){
 
-        fetch('http://localhost:4000/removefromcart', {
+        fetch('https://shopeasy-ecommerce-web-application.onrender.com/removefromcart', {
 
             method: 'POST',
             headers: {

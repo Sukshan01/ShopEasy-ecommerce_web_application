@@ -24,7 +24,7 @@ const LoginSignup = () => {
     console.log("Login Function Executed", formdata);
     let responseData;
 
-    await fetch('http://localhost:4000/login', {
+    await fetch('https://shopeasy-ecommerce-web-application.onrender.com/login', {
 
         method: 'POST',
         headers: {
@@ -55,7 +55,7 @@ const LoginSignup = () => {
 
     let responseData;
 
-      await fetch('http://localhost:4000/signup', {
+      await fetch('https://shopeasy-ecommerce-web-application.onrender.com/signup', {
 
           method: 'POST',
           headers: {

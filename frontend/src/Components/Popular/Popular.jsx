@@ -10,7 +10,7 @@ const Popular = () => {
 
   useEffect(() => {
 
-    fetch('http://localhost:4000/popularinwomen')
+    fetch('https://shopeasy-ecommerce-web-application.onrender.com/popularinwomen')
     .then((res) => res.json())
     .then((data) => setPopulatProducts(data));
 
